@@ -100,27 +100,31 @@
     <Compile Include="Views\Register.xaml.cs">
       <DependentUpon>Register.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Spares.xaml.cs">
-      <DependentUpon>Spares.xaml</DependentUpon>
+    <Compile Include="Views\Admin.xaml.cs">
+      <DependentUpon>Admin.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Client.xaml.cs">
       <DependentUpon>Client.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Warehouses.xaml.cs">
-      <DependentUpon>Warehouses.xaml</DependentUpon>
-    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Views\SpareAdd.xaml.cs">
+      <DependentUpon>SpareAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\WarehouseAdd.xaml.cs">
+      <DependentUpon>WarehouseAdd.xaml</DependentUpon>
     </Compile>
     <Compile Include="Warehouses.cs">
       <DependentUpon>SparesTrackerModel.tt</DependentUpon>
     </Compile>
     <Page Include="Views\Login.xaml" />
     <Page Include="Views\Register.xaml" />
-    <Page Include="Views\Spares.xaml" />
+    <Page Include="Views\Admin.xaml" />
     <Page Include="Views\Client.xaml" />
-    <Page Include="Views\Warehouses.xaml" />
+    <Page Include="Views\SpareAdd.xaml" />
+    <Page Include="Views\WarehouseAdd.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

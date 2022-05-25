@@ -2,9 +2,9 @@ using System.Windows;
 
 namespace SparesTracker.Views
 {
-    public partial class Spares : Window
+    public partial class SpareAdd : Window
     {
-        public Spares(Users client)
+        public SpareAdd(Users client)
         {
             InitializeComponent();
         }
