@@ -29,7 +29,7 @@ namespace SparesTracker.Views
 
                     if (client.id == 1)
                     {
-                        Spares actionWin = new Spares(client);
+                        Admin actionWin = new Admin(client);
                         Hide();
                         actionWin.ShowDialog();
                     }
