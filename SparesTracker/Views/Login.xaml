@@ -1,0 +1,21 @@
+<Window x:Class="SparesTracker.Views.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Login"  MinHeight="500" MinWidth="525" Height="500" Width="525">
+    <Grid>
+        <Grid VerticalAlignment="Top" Height="100">
+            <Image VerticalAlignment="Center" HorizontalAlignment="Center" Source="/Sources/logo.jpg"/>
+        </Grid>
+        <Label FontSize="20" Margin="0, 0, 200, 200" Height="40" Width="100">Логин:</Label>
+        <TextBox x:Name="LoginTextBox" FontSize="35" Margin="0, 0, 0, 120" Height="50" Width="300"/>
+        <Label FontSize="20" Margin="0, 0, 200, 30" Height="40" Width="100">Пароль:</Label>
+        <PasswordBox x:Name="PasswordBox" FontSize="35" Margin="0,50, 0, 0" Height="50" Width="300"/>
+        
+        <Button x:Name="Register" Click="RegisterClick" Margin="0,140, 150, 0" FontSize="12" Height="20" Width="80">Регистрация</Button>
+        <Button x:Name="LoginSystem" Click="LoginSystemClick" Margin="145,140, 0, 0" FontSize="12" Height="20" Width="80">Вход</Button>
+    </Grid>
+</Window>
