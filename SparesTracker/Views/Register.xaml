@@ -11,13 +11,13 @@
             <Image VerticalAlignment="Center" HorizontalAlignment="Center" Source="\Sources\logo.jpg"/>
         </Grid>
         <Label FontSize="20" Margin="0, 0, 200, 200" Height="40" Width="100">Логин:</Label>
-        <TextBox FontSize="35" Margin="0, 0, 0, 120" Height="50" Width="300"/>
+        <TextBox x:Name="LoginBox" FontSize="35" Margin="0, 0, 0, 120" Height="50" Width="300"/>
         <Label FontSize="20" Margin="0, 0, 200, 30" Height="40" Width="100">Пароль:</Label>
-        <PasswordBox FontSize="35" Margin="0,50, 0, 0" Height="50" Width="300"/>
+        <PasswordBox x:Name="PasswordBox" FontSize="35" Margin="0,50, 0, 0" Height="50" Width="300"/>
         <Label FontSize="20" Margin="70, 130, 150, 0" Height="40" Width="220">Подтвердите пароль:</Label>
-        <PasswordBox FontSize="35" Margin="0,210, 0, 0" Height="50" Width="300"/>
+        <PasswordBox x:Name="ConfirmPasswordBox" FontSize="35" Margin="0,210, 0, 0" Height="50" Width="300"/>
 
-        <Button Margin="145,300, 0, 0" FontSize="12" Height="20" Width="80">Регистрация</Button>
+        <Button Click="RegisterClick" Margin="145,300, 0, 0" FontSize="12" Height="20" Width="80">Регистрация</Button>
         <Button x:Name="Login" Click="LoginClick" Margin="0,300, 150, 0" FontSize="12" Height="20" Width="80">Вход</Button>
     </Grid>
 </Window>
