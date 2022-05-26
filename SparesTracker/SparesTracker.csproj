@@ -66,7 +66,6 @@
     </ApplicationDefinition>
     <Compile Include="Entities\DataUser.cs" />
     <Compile Include="Entities\Entities.cs" />
-    <Compile Include="Entities\Validator.cs" />
     <Compile Include="Roles.cs">
       <DependentUpon>SparesTrackerModel.tt</DependentUpon>
     </Compile>
@@ -161,7 +160,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Sources\logo.jpg" />
+    <Resource Include="Sources\logo.jpg" />
     <Content Include="SparesTrackerModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>SparesTrackerModel.Context.cs</LastGenOutput>
