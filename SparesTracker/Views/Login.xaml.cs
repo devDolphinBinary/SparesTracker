@@ -27,15 +27,17 @@ namespace SparesTracker.Views
                 {
                     Entities.DataUser.User = client;
 
-                    if (client.id == 1)
+                    if (client.roleId == 1)
                     {
-                        Admin actionWin = new Admin(client);
+                        Admin actionWin = new Admin();
                         Hide();
                         actionWin.ShowDialog();
                     }
-                    else if (client.id == 2)
+                    else if (client.roleId == 2)
                     {
-                        MessageBox.Show("Пользователь не является администратором");
+                        Client actionWin = new Client(client);
+                        Hide();
+                        actionWin.ShowDialog();
                     }
                 }
                 else

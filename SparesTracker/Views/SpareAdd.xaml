@@ -4,8 +4,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         mc:Ignorable="d"
+        Background="LightGray"
+        WindowStartupLocation="CenterScreen"
         Title="Admin" Height="450" Width="800">
     <Grid>
-        
+        <Grid VerticalAlignment="Top" Height="100">
+            <Image VerticalAlignment="Center" HorizontalAlignment="Center" Source="\Sources\logo.jpg"/>
+        </Grid>
+        <Label FontSize="20" Margin="0, 0, 150, 200" Height="40" Width="155">Наименование:</Label>
+        <TextBox x:Name="NameBox" FontSize="35" Margin="0, 0, 0, 120" Height="50" Width="300"/>
+        <Label FontSize="20" Margin="0, 0, 190, 30" Height="40" Width="110">ID Склада:</Label>
+        <TextBox x:Name="WarehouseIdBox" FontSize="35" Margin="0,50, 0, 0" Height="50" Width="300"/>
+        <Label FontSize="20" Margin="70, 130, 250, 0" Height="40" Width="120">Количество:</Label>
+        <TextBox x:Name="AmountBox" FontSize="35" Margin="0,210, 0, 0" Height="50" Width="300"/>
+
+        <Button Background="DarkGray" Click="CreateClick" Margin="145,300, 0, 0" FontSize="12" Height="20" Width="80">Создать</Button>
+        <Button Background="DarkGray" Click="CancelClick" Margin="0,300, 150, 0" FontSize="12" Height="20" Width="80">Отмена</Button>
     </Grid>
 </Window>

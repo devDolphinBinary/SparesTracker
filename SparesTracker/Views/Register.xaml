@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
+        Background="LightGray"
         Title="Login" MinHeight="500" MinWidth="525" Height="500" Width="525">
     <Grid>
         <Grid VerticalAlignment="Top" Height="100">
@@ -17,7 +18,7 @@
         <Label FontSize="20" Margin="70, 130, 150, 0" Height="40" Width="220">Подтвердите пароль:</Label>
         <PasswordBox x:Name="ConfirmPasswordBox" FontSize="35" Margin="0,210, 0, 0" Height="50" Width="300"/>
 
-        <Button Click="RegisterClick" Margin="145,300, 0, 0" FontSize="12" Height="20" Width="80">Регистрация</Button>
-        <Button x:Name="Login" Click="LoginClick" Margin="0,300, 150, 0" FontSize="12" Height="20" Width="80">Вход</Button>
+        <Button Background="DarkGray" Click="RegisterClick" Margin="145,300, 0, 0" FontSize="12" Height="20" Width="80">Регистрация</Button>
+        <Button Background="DarkGray" Click="LoginClick" Margin="0,300, 150, 0" FontSize="12" Height="20" Width="80">Вход</Button>
     </Grid>
 </Window>
