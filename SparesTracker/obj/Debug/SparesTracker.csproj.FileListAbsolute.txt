@@ -54,3 +54,4 @@ C:\Users\dolph\RiderProjects\SparesTracker\SparesTracker\obj\Debug\Views\Warehou
 C:\Users\dolph\RiderProjects\SparesTracker\SparesTracker\obj\Debug\Views\Admin.g.cs
 C:\Users\dolph\RiderProjects\SparesTracker\SparesTracker\obj\Debug\Views\SpareAdd.g.cs
 C:\Users\dolph\RiderProjects\SparesTracker\SparesTracker\obj\Debug\Views\WarehouseAdd.g.cs
+C:\Users\dolph\RiderProjects\SparesTracker\SparesTracker\bin\Debug\ru\EntityFramework.SqlServer.resources.dll

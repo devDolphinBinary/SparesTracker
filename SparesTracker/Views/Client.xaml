@@ -4,8 +4,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         mc:Ignorable="d"
+        Background="LightGray"
+        WindowStartupLocation="CenterScreen"
         Title="Users" Height="450" Width="800">
     <Grid>
-        
+        <Grid VerticalAlignment="Top" Height="100">
+            <Image VerticalAlignment="Center" HorizontalAlignment="Center" Source="/Sources/logo.jpg" />
+        </Grid>
+        <ListView Background="LightGray" x:Name="MainListView" Margin="0,40,0,0"
+                  Height="300"
+                  Width="800">
+        </ListView>
+        <Grid Height="50" VerticalAlignment="Bottom">
+            <Button Background="DarkGray" Click="ChangeUserClick" Margin="0,0,0,0" FontSize="12" Height="20"
+                    Width="130">
+                Сменить пользователя
+            </Button>
+        </Grid>
     </Grid>
 </Window>
