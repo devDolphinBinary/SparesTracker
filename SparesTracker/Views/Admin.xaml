@@ -56,7 +56,6 @@
                 </Style>
             </ListView.ItemContainerStyle>
             
-            
         </ListView>
 
         <TextBlock x:Name="NoItemsFoundTextBlock"
@@ -70,17 +69,13 @@
             <TextBlock x:Name="ItemAmountText"
                        Margin="10,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center"
                        Text="Выведено 100 из 100" />
-            <Button Background="DarkGray" Click="WarehousesClick" Margin="0,0,600,0" FontSize="12" Height="20"
+            <Button Background="DarkGray" Click="WarehousesClick" Margin="0,0,300,0" FontSize="12" Height="20"
                     Width="120">
                 Список складов
             </Button>
-            <Button Background="DarkGray" Click="CreateSpareClick" Margin="0,0,300,0" FontSize="12" Height="20"
+            <Button Background="DarkGray" Click="CreateSpareClick" Margin="0,0,0,0" FontSize="12" Height="20"
                     Width="120">
                 Добавить запчасть
-            </Button>
-            <Button Background="DarkGray" Click="CreateWarehouseClick" Margin="0,0,0,0" FontSize="12" Height="20"
-                    Width="120">
-                Добавить Склад
             </Button>
             <Button Background="DarkGray" Click="ChangeUserClick" Margin="300,0,0,0" FontSize="12" Height="20"
                     Width="130">

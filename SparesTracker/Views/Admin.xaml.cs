@@ -64,7 +64,7 @@ namespace SparesTracker.Views
                     break;
             }
 
-            FilteredSparesList = spares.ToList();
+            AdminListView.ItemsSource = spares.ToList();
 
             UpdateItemAmountText();
             GeneratePageButtons();
