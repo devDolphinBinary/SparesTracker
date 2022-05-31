@@ -12,7 +12,7 @@
             <Image VerticalAlignment="Center" HorizontalAlignment="Center" Source="/Sources/logo.jpg"/>
         </Grid>
         <Label FontSize="20" Margin="0, 0, 200, 200" Height="40" Width="100">Логин:</Label>
-        <TextBox x:Name="LoginTextBox" FontSize="35" Margin="0, 0, 0, 120" Height="50" Width="300"/>
+        <TextBox x:Name="LoginBox" FontSize="35" Margin="0, 0, 0, 120" Height="50" Width="300"/>
         <Label FontSize="20" Margin="0, 0, 200, 30" Height="40" Width="100">Пароль:</Label>
         <PasswordBox x:Name="PasswordBox" FontSize="35" Margin="0,50, 0, 0" Height="50" Width="300"/>
         

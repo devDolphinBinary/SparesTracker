@@ -8,16 +8,16 @@ using SparesTracker.Entities;
 
 namespace SparesTracker.Views
 {
-    public partial class Admin
+    public partial class GetListWarehouses
     {
-        private List<Spares> SparesList { get; set; }
-        private List<Spares> FilteredSparesList { get; set; }
-
+        private List<Warehouses> WarehousesList { get; set; }
+        private List<Warehouses> FilteredWarehousesList { get; set; }
+        
         private const int ItemsPerPage = 5;
 
         private int _currentPageIndex;
 
-        public Admin()
+        public GetListWarehouses()
         {
             InitializeComponent();
             DataContext = this;
@@ -27,44 +27,38 @@ namespace SparesTracker.Views
 
         private void UpdateAdminListView()
         {
-            SparesList = DatabaseOperations.GetAllSpares();
-            FilteredSparesList = SparesList;
+            WarehousesList = DatabaseOperations.GetAllWarehouses();
+            FilteredWarehousesList = WarehousesList;
 
             FilterSpares();
         }
 
         private void FilterSpares()
         {
-            if (SparesList is null)
+            if (WarehousesList is null)
                 return;
 
             var searchText = SearchTextBox.Text.ToLower();
 
-            var spares = SparesList.Where(s => s.name.ToLower().Contains(searchText));
+            var warehouses = WarehousesList.Where(s => s.name.ToLower().Contains(searchText));
 
             if (SearchTextBox.Text != "")
-                spares = spares.Where(s => s.name == SearchTextBox.Text);
+                warehouses = warehouses.Where(s => s.name == SearchTextBox.Text);
 
             switch (SortComboBox.SelectedValue.ToString())
             {
                 case "Наименование по возрастанию":
-                    spares = spares.OrderBy(s => s.name);
+                    warehouses = warehouses.OrderBy(s => s.name);
                     break;
                 case "Наименование по убыванию":
-                    spares = spares.OrderByDescending(s => s.name);
-                    break;
-                case "Остаток на складе по возрастанию":
-                    spares = spares.OrderBy(s => s.amount);
-                    break;
-                case "Остаток на складе по убыванию":
-                    spares = spares.OrderByDescending(s => s.amount);
+                    warehouses = warehouses.OrderByDescending(s => s.name);
                     break;
                 default:
-                    spares = spares.OrderBy(s => s.id);
+                    warehouses = warehouses.OrderBy(s => s.id);
                     break;
             }
 
-            FilteredSparesList = spares.ToList();
+            FilteredWarehousesList = warehouses.ToList();
 
             UpdateItemAmountText();
             GeneratePageButtons();
@@ -100,11 +94,11 @@ namespace SparesTracker.Views
                 }
             }
 
-            AdminListView.ItemsSource =
-                FilteredSparesList.Skip(_currentPageIndex * ItemsPerPage).Take(ItemsPerPage);
+            WarehousesListView.ItemsSource =
+                FilteredWarehousesList.Skip(_currentPageIndex * ItemsPerPage).Take(ItemsPerPage);
 
             NoItemsFoundTextBlock.Visibility =
-                FilteredSparesList.Count == 0 ? Visibility.Visible : Visibility.Collapsed;
+                FilteredWarehousesList.Count == 0 ? Visibility.Visible : Visibility.Collapsed;
         }
 
         private void GeneratePageButtons()
@@ -113,7 +107,7 @@ namespace SparesTracker.Views
 
             for (var i = 0; i < 5; i++)
             {
-                if (ItemsPerPage * i > FilteredSparesList.Count)
+                if (ItemsPerPage * i > FilteredWarehousesList.Count)
                     continue;
 
                 var pageButton = new Button
@@ -156,7 +150,7 @@ namespace SparesTracker.Views
 
         private void PageRightButton_Click(object sender, RoutedEventArgs e)
         {
-            if ((_currentPageIndex + 1) * ItemsPerPage < FilteredSparesList.Count)
+            if ((_currentPageIndex + 1) * ItemsPerPage < FilteredWarehousesList.Count)
                 _currentPageIndex++;
 
             UpdateCurrentPage();
@@ -177,13 +171,13 @@ namespace SparesTracker.Views
 
         private void UpdateItemAmountText()
         {
-            ItemAmountText.Text = $"Выведено {FilteredSparesList.Count} из {SparesList.Count}";
+            ItemAmountText.Text = $"Выведено {FilteredWarehousesList.Count} из {WarehousesList.Count}";
         }
 
         private void MaterialListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             ChangeAmountButton.Visibility =
-                AdminListView.SelectedItems.Count > 0 ? Visibility.Visible : Visibility.Collapsed;
+                WarehousesListView.SelectedItems.Count > 0 ? Visibility.Visible : Visibility.Collapsed;
         }
 
         private void CreateSpareClick(object sender, RoutedEventArgs e)
@@ -192,11 +186,11 @@ namespace SparesTracker.Views
             addSpare.Show();
             Close();
         }
-
-        private void WarehousesClick(object sender, RoutedEventArgs e)
+        
+        private void AdminClick(object sender, RoutedEventArgs e)
         {
-            var warehouses = new GetListWarehouses();
-            warehouses.Show();
+            var admin = new Admin();
+            admin.Show();
             Close();
         }
 

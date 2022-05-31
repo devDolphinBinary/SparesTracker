@@ -64,8 +64,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Entities\DatabaseOperations.cs" />
     <Compile Include="Entities\DataUser.cs" />
-    <Compile Include="Entities\Entities.cs" />
     <Compile Include="Roles.cs">
       <DependentUpon>SparesTrackerModel.tt</DependentUpon>
     </Compile>
@@ -115,6 +115,9 @@
     <Compile Include="Views\WarehouseAdd.xaml.cs">
       <DependentUpon>WarehouseAdd.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\GetListWarehouses.xaml.cs">
+      <DependentUpon>GetListWarehouses.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Warehouses.cs">
       <DependentUpon>SparesTrackerModel.tt</DependentUpon>
     </Compile>
@@ -124,6 +127,7 @@
     <Page Include="Views\Client.xaml" />
     <Page Include="Views\SpareAdd.xaml" />
     <Page Include="Views\WarehouseAdd.xaml" />
+    <Page Include="Views\GetListWarehouses.xaml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

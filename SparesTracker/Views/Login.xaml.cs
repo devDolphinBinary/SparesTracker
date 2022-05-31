@@ -10,7 +10,7 @@ namespace SparesTracker.Views
     public partial class Login
     {
         private readonly RepairPartsEntities _context = new RepairPartsEntities();
-        
+
         public Login()
         {
             InitializeComponent();
@@ -20,24 +20,32 @@ namespace SparesTracker.Views
         {
             try
             {
-                Users client = _context.Users.ToList()
-                    .FirstOrDefault(i => i.login == LoginTextBox.Text && i.password == PasswordBox.Password);
-
-                if (client != null)
+                var client = _context.Users.ToList()
+                    .FirstOrDefault(i => i.login == LoginBox.Text && i.password == PasswordBox.Password);
+                if (LoginBox.Text == "" || PasswordBox.Password == "")
+                {
+                    MessageBox.Show("Логин или пароль не указаны");
+                }
+                else if (client != null)
                 {
                     Entities.DataUser.User = client;
 
-                    if (client.roleId == 1)
+                    switch (client.roleId)
                     {
-                        Admin actionWin = new Admin();
-                        Hide();
-                        actionWin.ShowDialog();
-                    }
-                    else if (client.roleId == 2)
-                    {
-                        Client actionWin = new Client(client);
-                        Hide();
-                        actionWin.ShowDialog();
+                        case 1:
+                        {
+                            var actionWin = new Admin();
+                            Hide();
+                            actionWin.ShowDialog();
+                            break;
+                        }
+                        case 2:
+                        {
+                            var actionWin = new Client(client);
+                            Hide();
+                            actionWin.ShowDialog();
+                            break;
+                        }
                     }
                 }
                 else
@@ -51,11 +59,10 @@ namespace SparesTracker.Views
             }
         }
 
-
         private void RegisterClick(object sender, RoutedEventArgs e)
         {
-            Register registration = new Register();
-            this.Hide();
+            var registration = new Register();
+            Hide();
             registration.ShowDialog();
         }
     }

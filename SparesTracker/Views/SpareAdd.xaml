@@ -18,7 +18,7 @@
         <Label FontSize="20" Margin="70, 130, 250, 0" Height="40" Width="120">Количество:</Label>
         <TextBox x:Name="AmountBox" FontSize="35" Margin="0,210, 0, 0" Height="50" Width="300"/>
 
-        <Button Background="DarkGray" Click="CreateClick" Margin="145,300, 0, 0" FontSize="12" Height="20" Width="80">Создать</Button>
+        <Button Background="DarkGray" Click="CreateClick" Margin="145,300, 0, 0" FontSize="12" Height="20" Width="80">Добавить</Button>
         <Button Background="DarkGray" Click="CancelClick" Margin="0,300, 150, 0" FontSize="12" Height="20" Width="80">Отмена</Button>
     </Grid>
 </Window>

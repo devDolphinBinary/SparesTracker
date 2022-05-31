@@ -6,20 +6,52 @@
         mc:Ignorable="d"
         Background="LightGray"
         WindowStartupLocation="CenterScreen"
-        Title="Users" Height="450" Width="800">
+        Title="Users" MinHeight="450" MinWidth="800" MaxHeight="450" MaxWidth="800" Height="450" Width="800">
     <Grid>
         <Grid VerticalAlignment="Top" Height="100">
             <Image VerticalAlignment="Center" HorizontalAlignment="Center" Source="/Sources/logo.jpg" />
         </Grid>
+        <TextBlock Margin="0,0,600,380" Width="90" Height="40" FontSize="20" Text="Поиск:"/>
+        <TextBox FontSize="35" Margin="0,0,500,320" Width="200" Height="40" TextChanged="SearchTextBox_TextChanged"/>
         <ListView Background="LightGray" x:Name="MainListView" Margin="0,40,0,0"
                   Height="300"
                   Width="800">
+            
         </ListView>
         <Grid Height="50" VerticalAlignment="Bottom">
+            <TextBlock x:Name="ItemAmountText"
+                       Margin="10,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Text="Выведено 100 из 100" />
             <Button Background="DarkGray" Click="ChangeUserClick" Margin="0,0,0,0" FontSize="12" Height="20"
                     Width="130">
                 Сменить пользователя
             </Button>
+            <StackPanel Margin="670,0,0,0"
+                        ScrollViewer.CanContentScroll="False"
+                        ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                        Height="50"
+                        Width="50"
+                        Orientation="Horizontal">
+
+                <Button x:Name="PageLeftButton"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Center"
+                        Background="Transparent"
+                        FontWeight="Bold"
+                        BorderThickness="0"
+                        Content="&lt;" />
+
+                <StackPanel x:Name="ButtonStackPanel"
+                            Orientation="Horizontal">
+                </StackPanel>
+
+                <Button x:Name="PageRightButton"
+                        HorizontalAlignment="Right"
+                        VerticalAlignment="Center"
+                        Background="Transparent"
+                        FontWeight="Bold"
+                        BorderThickness="0"
+                        Content="&gt;" />
+            </StackPanel>
         </Grid>
     </Grid>
 </Window>
