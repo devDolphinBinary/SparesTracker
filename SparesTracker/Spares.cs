@@ -12,13 +12,13 @@ namespace SparesTracker
     using System;
     using System.Collections.Generic;
     
-    public partial class Spares
+    public sealed partial class Spares
     {
         public int id { get; set; }
         public string name { get; set; }
         public int warehouseId { get; set; }
         public int amount { get; set; }
     
-        public virtual Warehouses Warehouses { get; set; }
+        public Warehouses Warehouses { get; set; }
     }
 }

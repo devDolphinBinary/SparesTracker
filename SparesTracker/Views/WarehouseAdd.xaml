@@ -16,7 +16,7 @@
         <Label FontSize="20" Margin="0, 0, 185, 30" Height="40" Width="115">Адрес:</Label>
         <TextBox x:Name="AddressBox" FontSize="35" Margin="0,50, 0, 0" Height="50" Width="300"/>
 
-        <Button Background="DarkGray" Click="CreateClick" Margin="145,150, 0, 0" FontSize="12" Height="20" Width="80">Создать</Button>
+        <Button Background="DarkGray" Click="CreateClick" Margin="145,150, 0, 0" FontSize="12" Height="20" Width="80">Добавить</Button>
         <Button Background="DarkGray" Click="CancelClick" Margin="0,150, 150, 0" FontSize="12" Height="20" Width="80">Отмена</Button>
     </Grid>
 </Window>

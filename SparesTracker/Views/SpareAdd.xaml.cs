@@ -15,7 +15,7 @@ namespace SparesTracker.Views
 
         private void CreateClick(object sender, RoutedEventArgs e)
         {
-            string logBd = _context.Spares.Where(i => i.name == NameBox.Text).Select(j => j.name).FirstOrDefault();
+            var logBd = _context.Spares.Where(i => i.name == NameBox.Text).Select(j => j.name).FirstOrDefault();
 
             if (NameBox.Text == "" || WarehouseIdBox.Text == "" || AmountBox.Text == "")
             {

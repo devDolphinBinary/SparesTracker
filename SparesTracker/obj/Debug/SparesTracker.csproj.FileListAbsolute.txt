@@ -55,3 +55,5 @@ C:\Users\dolph\RiderProjects\SparesTracker\SparesTracker\obj\Debug\Views\Admin.g
 C:\Users\dolph\RiderProjects\SparesTracker\SparesTracker\obj\Debug\Views\SpareAdd.g.cs
 C:\Users\dolph\RiderProjects\SparesTracker\SparesTracker\obj\Debug\Views\WarehouseAdd.g.cs
 C:\Users\dolph\RiderProjects\SparesTracker\SparesTracker\bin\Debug\ru\EntityFramework.SqlServer.resources.dll
+C:\Users\dolph\RiderProjects\SparesTracker\SparesTracker\obj\Debug\Views\GetListWarehouses.baml
+C:\Users\dolph\RiderProjects\SparesTracker\SparesTracker\obj\Debug\Views\GetListWarehouses.g.cs
