@@ -30,10 +30,10 @@ namespace SparesTracker.Views
             WarehousesList = DatabaseOperations.GetAllWarehouses();
             FilteredWarehousesList = WarehousesList;
 
-            FilterSpares();
+            FilterWarehouses();
         }
 
-        private void FilterSpares()
+        private void FilterWarehouses()
         {
             if (WarehousesList is null)
                 return;
@@ -159,14 +159,14 @@ namespace SparesTracker.Views
         private void SearchTextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
             _currentPageIndex = 0;
-            FilterSpares();
+            FilterWarehouses();
         }
 
         private void SortComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             _currentPageIndex = 0;
 
-            FilterSpares();
+            FilterWarehouses();
         }
 
         private void UpdateItemAmountText()
@@ -174,19 +174,6 @@ namespace SparesTracker.Views
             ItemAmountText.Text = $"Выведено {FilteredWarehousesList.Count} из {WarehousesList.Count}";
         }
 
-        private void MaterialListView_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            ChangeAmountButton.Visibility =
-                WarehousesListView.SelectedItems.Count > 0 ? Visibility.Visible : Visibility.Collapsed;
-        }
-
-        private void CreateSpareClick(object sender, RoutedEventArgs e)
-        {
-            var addSpare = new SpareAdd();
-            addSpare.Show();
-            Close();
-        }
-        
         private void AdminClick(object sender, RoutedEventArgs e)
         {
             var admin = new Admin();
