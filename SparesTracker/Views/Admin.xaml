@@ -55,7 +55,48 @@
                     <Setter Property="MaxWidth" Value="{Binding ElementName=AdminListView,Path=Width}" />
                 </Style>
             </ListView.ItemContainerStyle>
-            
+            <ListView.ItemTemplate>
+                    <DataTemplate>
+
+                        <Grid MaxHeight="150">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition MinWidth="100"
+                                                  MaxWidth="100"
+                                                  x:Name="ImageColumn" />
+                                <ColumnDefinition Width="4*" />
+                                <ColumnDefinition />
+                            </Grid.ColumnDefinitions>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition />
+                                <RowDefinition />
+                                <RowDefinition Height="1.5*" />
+                            </Grid.RowDefinitions>
+
+                            <TextBlock Margin="-5,5,0,0"
+                                       TextAlignment="Left"
+                                       Grid.Column="1">
+
+                            </TextBlock>
+
+                            <TextBlock Grid.Column="1"
+                                       Grid.Row="1"
+                                       Text="{Binding name,StringFormat='Минимальное количество: {0}'}"
+                                       TextAlignment="Left" />
+
+                            <TextBlock Grid.Column="1"
+                                       Grid.Row="2"
+                                       TextWrapping="Wrap"
+                                       TextAlignment="Left"
+                                       Text="{Binding amount, TargetNullValue='Нет поставщиков'}" />
+
+                            <TextBlock Margin="5"
+                                       Grid.Column="2"
+                                       Text="{Binding warehouseId, StringFormat='Остаток: {0} шт'}" />
+                            
+                        </Grid>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
         </ListView>
 
         <TextBlock x:Name="NoItemsFoundTextBlock"

@@ -13,7 +13,7 @@ namespace SparesTracker.Views
         private List<Spares> SparesList { get; set; }
         private List<Spares> FilteredSparesList { get; set; }
 
-        private const int ItemsPerPage = 5;
+        private const int ItemsPerPage = 15;
 
         private int _currentPageIndex;
 
@@ -197,13 +197,6 @@ namespace SparesTracker.Views
         {
             var warehouses = new GetListWarehouses();
             warehouses.Show();
-            Close();
-        }
-
-        private void CreateWarehouseClick(object sender, RoutedEventArgs e)
-        {
-            var addWarehouse = new WarehouseAdd();
-            addWarehouse.Show();
             Close();
         }
 
